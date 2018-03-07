@@ -1,0 +1,20 @@
+# Declare a pipeline
+pipeline:
+  # Declare pipeline step
+  composer-install:
+    # Use image for step
+    image: fpfis/php71-build
+    # Run commands from this image
+    commands:
+      - composer install --ansi
+
+  # Declare another step
+  lint-code:
+    image: fpfis/php71-build
+    commands:
+      - php -l hello.php
+
+  run-code:
+    image: fpfis/php71-build
+    commands:
+      - php hello.php     
