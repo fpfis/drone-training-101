@@ -4,11 +4,13 @@ services:
   # Define a PHP webserver
   php-webserver:
     # Use a PHP image with apache
-    image: fpfis/php56-dev
+    #image: fpfis/php56-dev
+    image: myapp
+    #working_dir: /app
     # Define settings
     environment:
       - XDEBUG=true
-      - DOCUMENT_ROOT=/app/build
+      - DOCUMENT_ROOT=/app
     # Mount a local volume in the container
     volumes:
       - ./:/app/build

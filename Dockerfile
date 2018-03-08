@@ -15,4 +15,4 @@ ADD . /app
 RUN composer install
 
 # Specify which command to run when my container starts
-ENTRYPOINT [ "php", "/app/hello.php" ]
+#ENTRYPOINT [ "php", "/app/hello.php" ]
